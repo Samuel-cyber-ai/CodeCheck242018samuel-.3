@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 12</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="shortcut icon" type="image/jpg" href="Windows/System32/SystemLogo.svg"/>
+      <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <script src="script.js"></script>
+</head>
+<body onload="bootloader_action();">
+    <div id="bootloader">
+        <img draggable="false" id="system-logo-boot" src="Windows/System32/SystemLogo.svg">
+        <div id="bootloader-progress"></div>
+    </div>
+    <div id="taskbar-content">
+        <div onclick="start_button_click(); start_Action();" id="start-button" class="taskbar-button">
+            <img draggable="false" id="taskbar-button-start" class="taskbar-button-img" src="Windows/System32/SystemLogo.svg">
+        </div>
+        
+    </div>
+        <div class="align-center">
+    <div id="menu">
+        <div id="thought-text">
+            <span id="thought">Life is too short. Enjoy it!</span>
+        </div>
+        <button onclick="start_button_click_in_window(); startLaunchExplorer();" class="new-start" id="button-start">
+            <img id="start-button-img" src="Windows/System32/computer.png">
+        </button>
+    </div>
+    </div>
+    <div id="context-menu">
+    <div class="item">
+      <i class='bx bx-grid-alt'></i>  View<i class='bx bx-chevron-right' ></i>
+     </div>
+    <div class="item">
+      <i class='bx bx-sort-alt-2'></i> Sort by<i class='bx bx-chevron-right' ></i>
+     </div>
+     <div class="item">
+      <i class='bx bx-revision bx-flip-horizontal' ></i> Refresh
+     </div>
+     <hr>
+     <div class="item">
+      <i class='bx bx-undo bx-rotate-270' ></i> Undo delete
+     </div>
+     <div class="item">
+      <i class='bx bx-disc bx-rotate-270' ></i> New <i class='bx bx-chevron-right' ></i>
+    </div>
+     <hr>
+     <div class="item">
+      <i class="fa fa-clone"></i> Display Settings
+    </div>
+    <div class="item">
+      <i class='bx bx-paint' ></i> Personalize
+    </div>
+    <hr>
+    <div class="item">
+      <i class="fa fa-clone"></i> Open in Windows Terminal 
+    </div>
+    <div class="item">
+      <i class="fa fa-clone"></i> Open in Windows Terminal Preview
+    </div>
+    <hr>
+    <div class="item">
+      <i class='bx bx-link-external' ></i> Show more options
+    </div>
+   </div>
+</body>
+</html>
