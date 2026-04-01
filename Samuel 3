@@ -1,0 +1,209 @@
+body {
+    background-image: url('wallpaper.jpeg');
+    background-size: cover;
+     background-position: center;
+    background-repeat: no-repeat;
+      height:100vh;
+    overflow: hidden;
+      padding: 0;
+    margin: 0;
+}
+
+#bootloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    text-align: center;
+    transition: transform 300ms;
+    transform: scale(1);
+    transform-origin: left bottom;
+    cursor: none;
+}
+
+#bootloader.complete {
+    transform: scale(0);
+}
+
+#system-logo-boot {
+    position: relative;
+    width: 150px;
+    top: 20%;
+}
+
+#bootloader-progress {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 7px solid white;
+    border-radius: 50%;
+    border-top: 7px solid gray;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    animation: load-os 1s infinite;
+}
+
+@keyframes load-os {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#taskbar-content {
+  position: fixed;
+  bottom: 0px;
+
+    width: 100%;
+    height: 67px;
+    background-color: rgba(255, 255, 255, 0.755);
+    transition: transform 300ms;
+    transform: scale(0);
+   text-align: center;
+    transform-origin: bottom center;
+      line-height: 67px;
+    display: flex;
+    justify-content: center;
+}
+
+#taskbar-content.active {
+    transform: scale(1);
+}
+
+.taskbar-button-img {
+    transition:  0.2s;
+    width: 30px;
+      padding: 4px;
+}
+.taskbar-button-img:active{
+    transform: scale(0.6);
+}
+.taskbar-button {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.535);
+    margin: 4px;
+    border-radius: 5px;
+    transition: background 100ms;
+    transform: translateY(1px);
+}
+
+#menu {
+position: absolute;
+  bottom: 87px;
+    z-index: 10000;
+    width: 500px;
+    height: 700px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    transform-origin: bottom center;
+    font-family: arial;
+    transform: scale(0);
+    transition: transform 300ms;
+    backdrop-filter: blur(12px);
+    transform-origin: bottom center;
+}
+
+#menu.act {
+    transform: scale(1);
+}
+
+#thought-text {
+    width: 100%;
+    height: 10%;
+    background-color: rgba(255, 255, 255, 0.864);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    color: black;
+}
+
+#thought {
+    position: relative;
+    top: 30%;
+}
+
+.new-start {
+    width: 70px;
+    height: 50px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.535);
+    transition: background 100ms;
+}
+
+#start-button-img {
+    transition: width 300ms;
+    width: 30px;
+    margin-top: 20px;
+}
+
+#context-menu.active {
+    transform: scale(1);
+    transition: transform 300ms ease-in-out;
+}
+#context-menu {
+    position: fixed;
+    margin: 3px;
+    width: 245px;
+    backdrop-filter: blur(12px);
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.9);
+    transform: scale(0);
+    transform-origin: top left;
+    box-shadow: 0 0 20px 0px rgb(0 0 0 / 10%);
+}
+#context-menu {
+    position:fixed;
+    margin: 3px;
+    width:245px;
+    backdrop-filter: blur(12px);
+    border-radius:7px;
+    background:rgba(255, 255, 255, 0.9) ;
+    transform:scaleY(0);
+    transform-origin:top left;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+    
+  }
+  #context-menu.active {
+    transform:scaleY(1);
+    transition:transform 300ms ease-in-out;
+  }
+  #context-menu .item {
+    margin: 1px 6px 3px 6px;
+    padding:4px 6px;
+    font-size:9.6px;
+    color: #000;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: default;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  #context-menu .item:hover {
+     border-color:#AFAFAF1A;
+  }
+  #context-menu .item i {
+    display:inline-block;
+    margin-right:5px;
+    font-size: 14px;
+  }
+  #context-menu .item .bx-chevron-right{
+  transform: translateY(4px);
+  }
+  #context-menu hr {
+    margin:1px 0px;
+  background: lightgray;
+   width: 99%;
+   height: 1px;
+   
+  }
+
+  .align-center{ 
+      display: flex;
+      justify-content: center;
+  }
